@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="icofont/icofont.min.css">
+    <title>SignUp</title>
+</head>
+<body>
+    <main>
+        <div class="largest">
+            <div id="container-1"> 
+                <div class="big-div">
+                    <div class="signUp">
+                        <img class="img" src="lib logo.png" alt=""><br><br>
+                        <button id="signUp">Sign up</button>
+                        <button id="logIn" onclick="logInPage()">Log in</button><br><br>
+                        <input id="email" placeholder="Email" type="email"><br><br>
+                        <input id="username" placeholder="Username" type="text"><br><br>
+                        <input id="password" placeholder="password" type="password"><br><br>
+                        <button onclick="submit()" id="submitBtn">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div id="signup-msg"></div>
+        </div>
+       <div id="loader">
+            <img class="gif" src="loading-gif.gif" alt="">
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="bootstrap-5.3.0-alpha1-dist/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
