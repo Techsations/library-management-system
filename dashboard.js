@@ -59,4 +59,5 @@ bookStore.forEach(el => {
   })
 });
 }
+dispProd();
 
