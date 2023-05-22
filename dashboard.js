@@ -50,5 +50,13 @@ async function fetchApi(){
 fetchApi();
 
 function dispProd(){
+bookStore.forEach(el => {
+  el.forEach(element => {
+    console.log(element);
+    // function appear (el, element, index) {
+    
+    // }
+  })
+});
 }
 
