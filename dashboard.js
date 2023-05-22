@@ -28,7 +28,7 @@ dashboardWelcome.innerHTML = `Welcome to Sation Books, ${user.username}!`;
 
 // Fetch data from API
 
-let storage = JSON.parse(localStorage.getItem("myBooks"));
+let bookStore = JSON.parse(localStorage.getItem("myBooks"));
 
 async function disp(){
   await fetch('books.json')
@@ -36,6 +36,8 @@ async function disp(){
   .then(data => {
     // Work with the JSON data
     console.log(data);
+    let bookStore = [];
+    bookStore.push(data);
     localStorage.setItem("myBooks", JSON.stringify(bookStore));
     console.log((bookStore));
   })
