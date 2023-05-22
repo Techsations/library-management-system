@@ -27,3 +27,26 @@ dashboardWelcome.innerHTML = `Welcome to Sation Books, ${user.username}!`;
 // });
 
 // Fetch data from API
+
+
+async function disp(){
+  await fetch('books.json')
+  .then(response => response.json())
+  .then(data => {
+    // Work with the JSON data
+    console.log(data);
+  })
+  .catch(error => {
+    console.log('Error:', error);
+  });
+
+}
+
+disp();
+
+// async function dispProd() {
+//   let allProd = await fetch("https://my-json-server.typicode.com/typicode/demo")
+//   let response = await allProd.json()
+//     console.log(response);
+// }
+// dispProd();
