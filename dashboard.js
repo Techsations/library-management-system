@@ -30,7 +30,7 @@ dashboardWelcome.innerHTML = `Welcome to Sation Books, ${user.username}!`;
 
 let bookStore = JSON.parse(localStorage.getItem("myBooks"));
 
-async function disp(){
+async function fetchApi(){
   await fetch('books.json')
   .then(response => response.json())
   .then(data => {
@@ -47,11 +47,8 @@ async function disp(){
 
 }
 
-disp();
+fetchApi();
 
-// async function dispProd() {
-//   let allProd = await fetch("https://my-json-server.typicode.com/typicode/demo")
-//   let response = await allProd.json()
-//     console.log(response);
-// }
-// dispProd();
+function dispProd(){
+}
+
