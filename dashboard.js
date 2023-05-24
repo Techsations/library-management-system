@@ -28,7 +28,7 @@ dashboardWelcome.innerHTML = `Welcome to Sation Books, ${user.username}!`;
 
 // Fetch data from API
 
-let bookStore = JSON.parse(localStorage.getItem("myBooks"));
+let bookStore;
 
 async function fetchApi(){
   await fetch('books.json')
@@ -36,8 +36,8 @@ async function fetchApi(){
   .then(data => {
     // Work with the JSON data
     console.log(data);
-    let bookStore = [];
-    bookStore.push(data);
+    // let bookStore = [];
+    bookStore = data;
     localStorage.setItem("myBooks", JSON.stringify(bookStore));
     console.log((bookStore));
   })
@@ -47,19 +47,30 @@ async function fetchApi(){
 
 }
 
-fetchApi();
 
-function dispProd(){
+document.addEventListener('DOMContentLoaded', async function (){
+  await fetchApi();
+  let products = document.querySelector('.products');
+  function dispProd(){
+  
+    for (let i = 0; i < bookStore.length; i++) {
+      console.log(bookStore[i]);
 
-  for (let i = 0; i < bookStore.length; i++) {
-    console.log(bookStore[i]);
-    products.innerHTML +=`
-    <div class="product">
-    <h2>${bookStore[i].title}</h2>
-    </div>
-    `
-    
-  }
-  };
-dispProd();
+      innerBookstore = bookStore[i];
+
+      for (let i = 0; i < innerBookstore.length; i++) {
+        console.log(innerBookstore[i]);
+      }
+      products.innerHTML +=`
+      <div>
+      <h2>${bookStore[i].title}</h2>
+      <h3>${bookStore[i].authors}</h3>
+      </div>
+      `;
+      
+    }
+    };
+  dispProd();
+});
+
 
