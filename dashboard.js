@@ -53,6 +53,11 @@ function dispProd(){
 
   for (let i = 0; i < bookStore.length; i++) {
     console.log(bookStore[i]);
+    products.innerHTML +=`
+    <div class="product">
+    <h2>${bookStore[i].title}</h2>
+    </div>
+    `
     
   }
   };
