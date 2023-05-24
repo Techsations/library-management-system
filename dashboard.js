@@ -62,11 +62,11 @@ document.addEventListener('DOMContentLoaded', async function (){
         console.log(innerBookstore[i]);
       }
       products.innerHTML +=`
-      <div>
-      <img src="${bookStore[i].thumbnailUrl}" alt="">
-      <h1>${bookStore[i].title}</h1>
-      <h3>${bookStore[i].authors}</h3>
-      <h4>${bookStore[i].categories}</h4>
+      <div class="book-cont">
+      <img src="${bookStore[i].thumbnailUrl}" alt="" class="book-img">
+      <h1 class="book-title">${bookStore[i].title}</h1>
+      <h3 class="book-author">By: ${bookStore[i].authors}</h3>
+      <h4 class="book-cat">Category: ${bookStore[i].categories}</h4>
       </div>
       `;
       
@@ -89,11 +89,11 @@ document.addEventListener('DOMContentLoaded', async function (){
         console.log(innerBookstore[i]);
       }
       others.innerHTML +=`
-      <div>
-      <img src="${bookStore[i].thumbnailUrl}" alt="">
-      <h1>${bookStore[i].title}</h1>
-      <h3>${bookStore[i].authors}</h3>
-      <h4>${bookStore[i].categories}</h4>
+      <div class="book-cont">
+      <img src="${bookStore[i].thumbnailUrl}" alt="" class="book-img">
+      <h1 class="book-title">${bookStore[i].title}</h1>
+      <h3 class="book-author">By: ${bookStore[i].authors}</h3>
+      <h4 class="book-cat">Category: ${bookStore[i].categories}</h4>
       </div>
       `;
       

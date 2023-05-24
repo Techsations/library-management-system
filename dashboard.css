@@ -44,3 +44,32 @@ body{
     font-size: 40px;
     padding-left: 10px;
   }
+
+  /* styling the book section */
+
+  .header{
+    background-color: seagreen;
+  }
+  .heading{
+    background-color: greenyellow;
+  }
+  .head-tag, .section-tag{
+    font-size: 40px;
+    padding-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+  }
+  .products, .others {
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem, 1fr));
+    gap: 2rem;
+  }
+  .book-img{
+    width: 250px;
+    height: 250px;
+  }
+  .book-title{
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
