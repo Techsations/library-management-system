@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', async function (){
   let products = document.querySelector('.products');
   function dispProd(){
   
-    for (let i = 0; i < bookStore.length; i++) {
+    for (let i = 0; i < 31; i++) {
       console.log(bookStore[i]);
 
       innerBookstore = bookStore[i];
@@ -63,8 +63,10 @@ document.addEventListener('DOMContentLoaded', async function (){
       }
       products.innerHTML +=`
       <div>
-      <h2>${bookStore[i].title}</h2>
+      <img src="${bookStore[i].thumbnailUrl}" alt="">
+      <h1>${bookStore[i].title}</h1>
       <h3>${bookStore[i].authors}</h3>
+      <h4>${bookStore[i].categories}</h4>
       </div>
       `;
       
@@ -73,4 +75,42 @@ document.addEventListener('DOMContentLoaded', async function (){
   dispProd();
 });
 
+document.addEventListener('DOMContentLoaded', async function (){
+  await fetchApi();
+  let others = document.querySelector('.others');
+  function dispOther(){
+  
+    for (let i = 32; i < 61; i++) {
+      console.log(bookStore[i]);
 
+      innerBookstore = bookStore[i];
+
+      for (let i = 0; i < innerBookstore.length; i++) {
+        console.log(innerBookstore[i]);
+      }
+      others.innerHTML +=`
+      <div>
+      <img src="${bookStore[i].thumbnailUrl}" alt="">
+      <h1>${bookStore[i].title}</h1>
+      <h3>${bookStore[i].authors}</h3>
+      <h4>${bookStore[i].categories}</h4>
+      </div>
+      `;
+      
+    }
+    };
+  dispOther();
+});
+
+
+// for (let i = 31; i < 60; i++) {
+//   others.innerHTML +=`
+//   <div>
+//   <img src="${bookStore[i].thumbnailUrl}" alt="">
+//   <h1>${bookStore[i].title}</h1>
+//   <h3>${bookStore[i].authors}</h3>
+//   <h4>${bookStore[i].categories}</h4>
+//   </div>
+//   `;
+  
+// }
