@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', async function (){
   let products = document.querySelector('.products');
   function dispProd(){
   
-    for (let i = 0; i < 31; i++) {
+    for (let i = 0; i < 32; i++) {
+      let description = bookStore[i].shortDescription
       console.log(bookStore[i]);
 
       innerBookstore = bookStore[i];
@@ -66,9 +67,11 @@ document.addEventListener('DOMContentLoaded', async function (){
       <div class="book-div">
       <img src="${bookStore[i].thumbnailUrl}" alt="" class="book-img">
       <h1 class="book-title">${bookStore[i].title}</h1>
+      <p class="book-description"><strong>Description:</strong> ${description}</p>
       <h3 class="book-author">By: ${bookStore[i].authors}</h3>
       <h4 class="book-cat">Category: ${bookStore[i].categories}</h4>
       </div>
+      <button class="down-btn">Download</button>
       </div>
       `;
       
@@ -82,7 +85,9 @@ document.addEventListener('DOMContentLoaded', async function (){
   let others = document.querySelector('.others');
   function dispOther(){
   
-    for (let i = 32; i < 61; i++) {
+    for (let i = 32; i < 64; i++) {
+
+      let description = bookStore[i].shortDescription
       console.log(bookStore[i]);
 
       innerBookstore = bookStore[i];
@@ -95,9 +100,11 @@ document.addEventListener('DOMContentLoaded', async function (){
       <div class="book-div">
       <img src="${bookStore[i].thumbnailUrl}" alt="" class="book-img">
       <h1 class="book-title">${bookStore[i].title}</h1>
+      <p class="book-description"><strong>Description:</strong> ${description}</p>
       <h3 class="book-author">By: ${bookStore[i].authors}</h3>
       <h4 class="book-cat">Category: ${bookStore[i].categories}</h4>
       </div>
+      <button class="down-btn">Download</button>
       </div>
       `;
       

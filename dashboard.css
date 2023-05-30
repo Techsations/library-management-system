@@ -83,3 +83,19 @@ body{
     font-size: 2rem;
     padding: 1rem 0;
   }
+  .book-description{
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+  }
+  .down-btn{
+    width: 120px;
+    height: 30px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-left: 15px;
+  }
